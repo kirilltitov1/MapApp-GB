@@ -8,7 +8,7 @@ target 'MapApp' do
   # Pods for MapApp
 	pod 'GoogleMaps'
 	pod 'Alamofire'
-	pod 'Texture'
+#	pod 'Texture'
 
   target 'MapAppTests' do
     inherit! :search_paths
