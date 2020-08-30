@@ -1,20 +1,68 @@
 PODS:
+  - Alamofire (5.2.2)
   - GoogleMaps (3.10.0):
     - GoogleMaps/Maps (= 3.10.0)
   - GoogleMaps/Base (3.10.0)
   - GoogleMaps/Maps (3.10.0):
     - GoogleMaps/Base
+  - PINCache (3.0.1-beta.8):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.8)
+    - PINCache/Core (= 3.0.1-beta.8)
+  - PINCache/Arc-exception-safe (3.0.1-beta.8):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.8):
+    - PINOperation (~> 1.1.1)
+  - PINOperation (1.1.2)
+  - PINRemoteImage/Core (3.0.0):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0):
+    - PINCache (= 3.0.1-beta.8)
+    - PINRemoteImage/Core
+  - Texture (3.0.0):
+    - Texture/AssetsLibrary (= 3.0.0)
+    - Texture/Core (= 3.0.0)
+    - Texture/MapKit (= 3.0.0)
+    - Texture/Photos (= 3.0.0)
+    - Texture/PINRemoteImage (= 3.0.0)
+    - Texture/Video (= 3.0.0)
+  - Texture/AssetsLibrary (3.0.0):
+    - Texture/Core
+  - Texture/Core (3.0.0)
+  - Texture/MapKit (3.0.0):
+    - Texture/Core
+  - Texture/Photos (3.0.0):
+    - Texture/Core
+  - Texture/PINRemoteImage (3.0.0):
+    - PINRemoteImage/iOS (~> 3.0.0)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (3.0.0):
+    - Texture/Core
 
 DEPENDENCIES:
+  - Alamofire
   - GoogleMaps
+  - Texture
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - GoogleMaps
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - Texture
 
 SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
+  PINCache: 534fd41d358d828dfdf227a0d327f3673a65e20b
+  PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
+  PINRemoteImage: e2b89e19fb6e77ffc099f9d9f3b3fe1745e3f9f9
+  Texture: 2f109e937850d94d1d07232041c9c7313ccddb81
 
-PODFILE CHECKSUM: a3abc20ab7b86306f8bbb2e6d8f4ed10eb76dd18
+PODFILE CHECKSUM: 89428bda53b0628210f281c616d21baf004f2d7a
 
 COCOAPODS: 1.9.1
