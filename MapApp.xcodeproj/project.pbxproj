@@ -10,12 +10,12 @@
 		1F387648A9A0E789DBE7143D /* Pods_MapAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E41227DC83FBAF1546A7963 /* Pods_MapAppUITests.framework */; };
 		2EAF43D56D5522E1B13C4D51 /* Pods_MapApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88DC2151C63CD91EF146E73 /* Pods_MapApp.framework */; };
 		CA559EF192F1EA1989ADDFF1 /* Pods_MapAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002E5DFA73886FDB05355493 /* Pods_MapAppTests.framework */; };
+		EF02D5F124FCED45005A9125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF02D5F024FCED45005A9125 /* Main.storyboard */; };
+		EF02D5F324FCED8F005A9125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF02D5F224FCED8F005A9125 /* LaunchScreen.storyboard */; };
 		EF32D46E24FBB1B200B65664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D46D24FBB1B200B65664 /* AppDelegate.swift */; };
 		EF32D47024FBB1B200B65664 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */; };
 		EF32D47224FBB1B200B65664 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D47124FBB1B200B65664 /* ViewController.swift */; };
-		EF32D47524FBB1B200B65664 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF32D47324FBB1B200B65664 /* Main.storyboard */; };
 		EF32D47724FBB1B300B65664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF32D47624FBB1B300B65664 /* Assets.xcassets */; };
-		EF32D47A24FBB1B300B65664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF32D47824FBB1B300B65664 /* LaunchScreen.storyboard */; };
 		EF32D48524FBB1B300B65664 /* MapAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D48424FBB1B300B65664 /* MapAppTests.swift */; };
 		EF32D49024FBB1B300B65664 /* MapAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D48F24FBB1B300B65664 /* MapAppUITests.swift */; };
 /* End PBXBuildFile section */
@@ -47,13 +47,13 @@
 		BF10037791DF3853796142F7 /* Pods-MapAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapAppTests.release.xcconfig"; path = "Target Support Files/Pods-MapAppTests/Pods-MapAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		C5F0DCA1465CBA5ACA542E20 /* Pods-MapApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapApp.release.xcconfig"; path = "Target Support Files/Pods-MapApp/Pods-MapApp.release.xcconfig"; sourceTree = "<group>"; };
 		D783ACBEBA80F221ED21B0B5 /* Pods-MapAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MapAppUITests/Pods-MapAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EF02D5F024FCED45005A9125 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EF02D5F224FCED8F005A9125 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF32D46A24FBB1B200B65664 /* MapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF32D46D24FBB1B200B65664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EF32D47124FBB1B200B65664 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EF32D47424FBB1B200B65664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF32D47624FBB1B300B65664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EF32D47924FBB1B300B65664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF32D47B24FBB1B300B65664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF32D48024FBB1B300B65664 /* MapAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF32D48424FBB1B300B65664 /* MapAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAppTests.swift; sourceTree = "<group>"; };
@@ -118,6 +118,73 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EF02D5E924FCE469005A9125 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				EF32D47624FBB1B300B65664 /* Assets.xcassets */,
+				EF02D5F224FCED8F005A9125 /* LaunchScreen.storyboard */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		EF02D5EA24FCE499005A9125 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EF02D5EB24FCE4A7005A9125 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EF32D46D24FBB1B200B65664 /* AppDelegate.swift */,
+				EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */,
+				EF02D5EE24FCE4FE005A9125 /* Assembly */,
+				EF02D5ED24FCE4E4005A9125 /* Entity */,
+				EF02D5EC24FCE4C2005A9125 /* Flowes */,
+				EF02D5EF24FCE512005A9125 /* BusinessLogic */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EF02D5EC24FCE4C2005A9125 /* Flowes */ = {
+			isa = PBXGroup;
+			children = (
+				EF02D5F024FCED45005A9125 /* Main.storyboard */,
+			);
+			path = Flowes;
+			sourceTree = "<group>";
+		};
+		EF02D5ED24FCE4E4005A9125 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EF02D5EE24FCE4FE005A9125 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF02D5EF24FCE512005A9125 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				EF32D47124FBB1B200B65664 /* ViewController.swift */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		EF056BFB24FCE3BD00B23182 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				EF32D47B24FBB1B300B65664 /* Info.plist */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
 		EF32D46124FBB1B200B65664 = {
 			isa = PBXGroup;
 			children = (
@@ -143,13 +210,10 @@
 		EF32D46C24FBB1B200B65664 /* MapApp */ = {
 			isa = PBXGroup;
 			children = (
-				EF32D46D24FBB1B200B65664 /* AppDelegate.swift */,
-				EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */,
-				EF32D47124FBB1B200B65664 /* ViewController.swift */,
-				EF32D47324FBB1B200B65664 /* Main.storyboard */,
-				EF32D47624FBB1B300B65664 /* Assets.xcassets */,
-				EF32D47824FBB1B300B65664 /* LaunchScreen.storyboard */,
-				EF32D47B24FBB1B300B65664 /* Info.plist */,
+				EF056BFB24FCE3BD00B23182 /* Environments */,
+				EF02D5E924FCE469005A9125 /* Resourse */,
+				EF02D5EA24FCE499005A9125 /* Utils */,
+				EF02D5EB24FCE4A7005A9125 /* App */,
 			);
 			path = MapApp;
 			sourceTree = "<group>";
@@ -282,9 +346,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF32D47A24FBB1B300B65664 /* LaunchScreen.storyboard in Resources */,
+				EF02D5F324FCED8F005A9125 /* LaunchScreen.storyboard in Resources */,
 				EF32D47724FBB1B300B65664 /* Assets.xcassets in Resources */,
-				EF32D47524FBB1B200B65664 /* Main.storyboard in Resources */,
+				EF02D5F124FCED45005A9125 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,25 +531,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		EF32D47324FBB1B200B65664 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF32D47424FBB1B200B65664 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EF32D47824FBB1B300B65664 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF32D47924FBB1B300B65664 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		EF32D49224FBB1B300B65664 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -608,7 +653,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9396A9KSNU;
-				INFOPLIST_FILE = MapApp/Info.plist;
+				INFOPLIST_FILE = MapApp/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,7 +672,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9396A9KSNU;
-				INFOPLIST_FILE = MapApp/Info.plist;
+				INFOPLIST_FILE = MapApp/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
