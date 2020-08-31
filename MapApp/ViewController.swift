@@ -25,10 +25,14 @@ class ViewController: UIViewController {
 }
 
 // MARK: CORE LOCATION
-extension ViewController {
+extension ViewController: CLLocationManagerDelegate {
 
-	func setupLocationManager() {
+	private func setupLocationManager() {
 		locationManager = CLLocationManager()
 		locationManager?.requestWhenInUseAuthorization()
+	}
+
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
 	}
 }
