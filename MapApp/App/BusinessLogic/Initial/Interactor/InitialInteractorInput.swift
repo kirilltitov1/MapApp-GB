@@ -9,6 +9,6 @@
 import Foundation
 
 protocol InitialInteractorInput {
-	func startUpdateLocation()
-	func stopUpdateLocation()
+	func startUpdatingLocation()
+	func stopUpdatingLocation()
 }

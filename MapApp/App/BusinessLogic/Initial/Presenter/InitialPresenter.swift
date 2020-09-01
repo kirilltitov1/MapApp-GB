@@ -22,6 +22,6 @@ class InitialPresenter: InitialModuleInput, InitialViewOutput, InitialInteractor
 	}
 
     func viewIsReady() {
-		interactor.startUpdateLocation()
+		interactor.startUpdatingLocation()
     }
 }
