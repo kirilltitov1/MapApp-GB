@@ -22,12 +22,12 @@ class InitialViewController: UIViewController, InitialViewInput, showAlert {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		configurateMap()
         output.viewIsReady()
     }
 
     // MARK: InitialViewInput
     func setupInitialState() {
-		mapView.delegate = self
     }
 }
 
@@ -44,5 +44,11 @@ extension InitialViewController: GMSMapViewDelegate {
 		guard let location = location else { return }
 
 		mapView.animate(toLocation: location)
+	}
+
+	func configurateMap() {
+		mapView.delegate = self
+		mapView.animate(toZoom: 13)
+		mapView.mapType = .satellite
 	}
 }
