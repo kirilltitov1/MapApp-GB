@@ -11,12 +11,29 @@ class InitialInteractor: NSObject, InitialInteractorInput {
 
     weak var output: InitialInteractorOutput!
 
-	var locationManager: CLLocationManager?
+	var locationManager: CLLocationManager? {
+		let locationManager = CLLocationManager()
+		locationManager.requestWhenInUseAuthorization()
+		locationManager.delegate = self
+		return locationManager
+	}
 }
 
 // MARK: - LOCATION MANAGER
 extension InitialInteractor: CLLocationManagerDelegate {
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		output.currentLocation = locations.first?.coordinate
+	}
 
+	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+
+	}
+
+	func startUpdateLocation() {
+		locationManager?.startUpdatingLocation()
+	}
+
+	func stopUpdateLocation() {
+		locationManager?.stopUpdatingLocation()
 	}
 }

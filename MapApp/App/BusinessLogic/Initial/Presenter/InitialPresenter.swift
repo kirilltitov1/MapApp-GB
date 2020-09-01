@@ -6,13 +6,22 @@
 //  Copyright © 2020 nil. All rights reserved.
 //
 
+import CoreLocation
+
 class InitialPresenter: InitialModuleInput, InitialViewOutput, InitialInteractorOutput {
 
     weak var view: InitialViewInput!
     var interactor: InitialInteractorInput!
     var router: InitialRouterInput!
 
-    func viewIsReady() {
+	var currentLocation: CLLocationCoordinate2D? {
+		didSet {
+			view.updateCameraPosition(withLocation: currentLocation)
+			view.addMarker(toCoordinate: currentLocation)
+		}
+	}
 
+    func viewIsReady() {
+		interactor.startUpdateLocation()
     }
 }

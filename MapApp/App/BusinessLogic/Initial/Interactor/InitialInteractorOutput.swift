@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol InitialInteractorOutput: class {
-	
+	var currentLocation: CLLocationCoordinate2D? { get set }
 }

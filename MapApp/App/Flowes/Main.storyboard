@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jLo-My-FMc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="bNS-hh-hc2">
             <objects>
-                <viewController id="jLo-My-FMc" customClass="ViewController" customModule="MapApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jLo-My-FMc" customClass="InitialViewController" customModule="MapApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xWe-PS-olF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,10 +30,15 @@
                         <viewLayoutGuide key="safeArea" id="fyX-EZ-KHJ"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="ej7-wI-NsB" id="GpS-9S-KFW"/>
+                        <outlet property="mapView" destination="ej7-wI-NsB" id="o2j-Wz-ESD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOz-0A-ieg" sceneMemberID="firstResponder"/>
+                <customObject id="dEA-Lr-apN" customClass="InitialModuleInitializer" customModule="MapApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="initialViewController" destination="jLo-My-FMc" id="iG9-N3-EJd"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </scene>

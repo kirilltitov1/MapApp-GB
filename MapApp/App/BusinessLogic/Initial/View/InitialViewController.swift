@@ -27,32 +27,22 @@ class InitialViewController: UIViewController, InitialViewInput, showAlert {
 
     // MARK: InitialViewInput
     func setupInitialState() {
+		mapView.delegate = self
     }
 }
 
 // MARK: - GOOGLE MAPS
-extension InitialViewController {
+extension InitialViewController: GMSMapViewDelegate {
 
-	public func addMarker(toCoordinate coordinate: CLLocationCoordinate2D) {
+	public func addMarker(toCoordinate coordinate: CLLocationCoordinate2D?) {
+		guard let coordinate = coordinate else { return }
 		let marker = GMSMarker(position: coordinate)
 		marker.map = mapView
 	}
-}
 
-// MARK: - CORE LOCATION
-extension InitialViewController: CLLocationManagerDelegate {
+	public func updateCameraPosition(withLocation location: CLLocationCoordinate2D?) {
+		guard let location = location else { return }
 
-	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-		guard let updateCoordinate = locations.first?.coordinate else { return }
-		updateCameraPosition(withLocation: updateCoordinate)
-		addMarker(toCoordinate: updateCoordinate)
-	}
-
-	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-		showAlert(message: "\(error)")
-	}
-
-	public func updateCameraPosition(withLocation loction: CLLocationCoordinate2D) {
-		mapView.animate(toLocation: loction)
+		mapView.animate(toLocation: location)
 	}
 }
