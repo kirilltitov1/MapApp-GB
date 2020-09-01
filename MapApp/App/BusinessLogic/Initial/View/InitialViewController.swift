@@ -22,3 +22,14 @@ class InitialViewController: UIViewController, InitialViewInput {
     func setupInitialState() {
     }
 }
+
+extension InitialViewController: CLLocationManagerDelegate {
+
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+	}
+
+	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+		showAlert(message: "\(error)")
+	}
+}
