@@ -33,8 +33,6 @@ extension InitialInteractor: CLLocationManagerDelegate {
 	func startUpdatingLocation() {
 		configurateLocationManager()
 		locationManager?.startUpdatingLocation()
-
-		locationManager?.stopUpdatingLocation()
 	}
 
 	func stopUpdatingLocation() {
