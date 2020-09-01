@@ -21,7 +21,7 @@ extension InitialInteractor: CLLocationManagerDelegate {
 	}
 
 	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-
+		print(error)
 	}
 
 	func configurateLocationManager() {
