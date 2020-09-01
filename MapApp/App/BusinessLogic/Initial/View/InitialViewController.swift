@@ -14,9 +14,19 @@ class InitialViewController: UIViewController, InitialViewInput, showAlert {
 
     var output: InitialViewOutput!
 
-//	var locationManager: CLLocationManager?
-
 	@IBOutlet weak var mapView: GMSMapView!
+
+	@IBAction func compassPrerssed(_ sender: Any) {
+		output.switchCameraFollow()
+	}
+
+	@IBAction func plusPressed(_ sender: Any) {
+		output.zoomIn()
+	}
+
+	@IBAction func minusPressed(_ sender: Any) {
+		output.zoomOut()
+	}
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -34,10 +44,16 @@ class InitialViewController: UIViewController, InitialViewInput, showAlert {
 // MARK: - GOOGLE MAPS
 extension InitialViewController: GMSMapViewDelegate {
 
-	public func addMarker(toCoordinate coordinate: CLLocationCoordinate2D?) {
-		guard let coordinate = coordinate else { return }
-		let marker = GMSMarker(position: coordinate)
-		marker.map = mapView
+	private func configurateMap() {
+		mapView.delegate = self
+		mapView.animate(toZoom: 13)
+		mapView.mapType = .satellite
+	}
+
+	// Camera
+	public func cameraFollow(withLocation loction: CLLocationCoordinate2D?) {
+		guard let loction = loction else { return }
+		mapView.animate(toLocation: loction)
 	}
 
 	public func updateCameraPosition(withLocation location: CLLocationCoordinate2D?) {
@@ -46,9 +62,14 @@ extension InitialViewController: GMSMapViewDelegate {
 		mapView.animate(toLocation: location)
 	}
 
-	func configurateMap() {
-		mapView.delegate = self
-		mapView.animate(toZoom: 13)
-		mapView.mapType = .satellite
+	public func zoomCamera(byNumber number: Float) {
+		mapView.animate(toZoom: number)
+	}
+
+	// Marker
+	public func addMarker(toCoordinate coordinate: CLLocationCoordinate2D?) {
+		guard let coordinate = coordinate else { return }
+		let marker = GMSMarker(position: coordinate)
+		marker.map = mapView
 	}
 }

@@ -9,13 +9,13 @@ import CoreLocation
 
 protocol InitialViewInput: class {
 
-    /**
-        @author kirill
-        Setup initial state of the view
-    */
-
     func setupInitialState()
 
+	// Camera
 	func updateCameraPosition(withLocation loction: CLLocationCoordinate2D?)
+	func cameraFollow(withLocation loction: CLLocationCoordinate2D?)
+	func zoomCamera(byNumber number: Float)
+
+	// Marker
 	func addMarker(toCoordinate coordinate: CLLocationCoordinate2D?)
 }

@@ -8,10 +8,10 @@
 
 protocol InitialViewOutput {
 
-    /**
-        @author kirill
-        Notify presenter that view is ready
-    */
+	// Camera
+	func switchCameraFollow()
+	func zoomIn()
+	func zoomOut()
 
     func viewIsReady()
 }
