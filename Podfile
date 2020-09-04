@@ -9,6 +9,7 @@ target 'MapApp' do
 	pod 'GoogleMaps'
 	pod 'Alamofire'
 	pod 'RxSwift'
+	pod 'RxCocoa'
 #	pod 'Texture'
 
   target 'MapAppTests' do
