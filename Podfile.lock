@@ -5,20 +5,29 @@ PODS:
   - GoogleMaps/Base (3.10.0)
   - GoogleMaps/Maps (3.10.0):
     - GoogleMaps/Base
+  - RxSwift (5.1.1)
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
 
 DEPENDENCIES:
   - Alamofire
   - GoogleMaps
+  - RxSwift
+  - RxTest
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - GoogleMaps
+    - RxSwift
+    - RxTest
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
 
-PODFILE CHECKSUM: 05ad1ce9188a9426132248c9146f711fd347020c
+PODFILE CHECKSUM: eefd7743daa9f24086f6c5b6aa67ec20fedd1903
 
 COCOAPODS: 1.9.1
