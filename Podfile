@@ -7,10 +7,13 @@ target 'MapApp' do
 
   # Pods for MapApp
 	pod 'GoogleMaps'
+	
 	pod 'Alamofire'
+	
 	pod 'RxSwift'
 	pod 'RxCocoa'
-#	pod 'Texture'
+	
+	pod 'RealmSwift'
 
   target 'MapAppTests' do
     inherit! :search_paths

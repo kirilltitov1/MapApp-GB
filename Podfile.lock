@@ -5,6 +5,11 @@ PODS:
   - GoogleMaps/Base (3.10.0)
   - GoogleMaps/Maps (3.10.0):
     - GoogleMaps/Base
+  - Realm (5.3.6):
+    - Realm/Headers (= 5.3.6)
+  - Realm/Headers (5.3.6)
+  - RealmSwift (5.3.6):
+    - Realm (= 5.3.6)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -17,6 +22,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - GoogleMaps
+  - RealmSwift
   - RxCocoa
   - RxSwift
   - RxTest
@@ -25,6 +31,8 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - GoogleMaps
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -33,11 +41,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
+  Realm: cd400dd7e5b5bb5c8ae9842eecd73792369e6ec0
+  RealmSwift: 99a16dbdee5d6dfb3d91d56088a9f8c15c0871d1
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
 
-PODFILE CHECKSUM: eccb141a72d1011863d01accafff842033995dc2
+PODFILE CHECKSUM: 658967ab01312eb33608c7b5058dd99f5f76ea28
 
 COCOAPODS: 1.9.1
