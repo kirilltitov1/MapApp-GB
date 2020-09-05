@@ -14,6 +14,8 @@ target 'MapApp' do
 	pod 'RxCocoa'
 	
 	pod 'RealmSwift'
+	
+#	pod 'Texture'
 
   target 'MapAppTests' do
     inherit! :search_paths
