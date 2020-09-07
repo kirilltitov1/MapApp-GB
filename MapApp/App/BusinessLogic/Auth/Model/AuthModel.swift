@@ -9,20 +9,21 @@
 import Foundation
 import RxSwift
 
-struct SignInResponse {
+struct AuthResponse {
     let token: String
     let userId: String
 }
 
 protocol Auth {
-    func signIn() -> Single<SignInResponse>
+    func signIn() -> Single<AuthResponse>
 }
 
-class SessionService: Auth {
-    func signIn() -> Single<SignInResponse> {
-        return Single<SignInResponse>.create { single in
+class AuthService: Auth {
+    func signIn() -> Single<AuthResponse> {
+        return Single<AuthResponse>.create { single in
             // call to backend
-            single(.success(SignInResponse(token: "12345", userId: "5678")))
+			print("AuthService 'singIn'")
+            single(.success(AuthResponse(token: "12345", userId: "5678")))
             return Disposables.create()
         }
     }

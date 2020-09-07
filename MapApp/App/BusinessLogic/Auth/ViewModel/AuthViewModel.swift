@@ -9,10 +9,10 @@
 import Foundation
 import RxSwift
 
-class SignInViewModel {
+class AuthViewModel {
 
     private let disposeBag = DisposeBag()
-    private let authentication: Authentication
+    private let authentication: Auth
 
     let emailAddress = BehaviorSubject(value: "")
     let password = BehaviorSubject(value: "")
@@ -22,7 +22,7 @@ class SignInViewModel {
     let didSignIn = PublishSubject<Void>()
     let didFailSignIn = PublishSubject<Error>()
 
-    init(authentication: Authentication) {
+    init(authentication: Auth) {
         self.authentication = authentication
         self.isSignInActive = Observable.combineLatest(self.emailAddress, self.password).map { $0.0 != "" && $0.1 != "" }
     }

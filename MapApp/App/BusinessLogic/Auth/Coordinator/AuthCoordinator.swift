@@ -6,4 +6,32 @@
 //  Copyright © 2020 Кирилл Титов. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+
+class AuthCoordinator: BaseCoordinator {
+
+    private let disposeBag = DisposeBag()
+
+    override func start() {
+        let viewController = UIStoryboard.init(name: "Auth", bundle: nil).instantiateInitialViewController()
+        guard let authViewController = viewController as? AuthViewController else { return }
+
+        // Coordinator initializes and injects viewModel
+        let authViewModel = AuthViewModel(authentication: AuthService())
+        authViewController.viewModel = authViewModel
+
+        // Coordinator subscribes to events and notifies parentCoordinator
+        authViewModel.didSignIn
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+				print("1")
+                self.navigationController.viewControllers = []
+                self.parentCoordinator?.didFinish(coordinator: self)
+                (self.parentCoordinator as? SignInListener)?.didSignIn()
+				print("2")
+            })
+            .disposed(by: self.disposeBag)
+
+        self.navigationController.viewControllers = [authViewController]
+    }
+}

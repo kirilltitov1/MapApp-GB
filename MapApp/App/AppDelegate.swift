@@ -8,12 +8,18 @@
 
 import UIKit
 import GoogleMaps
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+	var window: UIWindow?
+	let appCoordinator = AppCoordinator()
+
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+
+		self.appCoordinator.start()
+
 		GMSServices.provideAPIKey("AIzaSyBkCDfpgjs7U0yAfw32-NGt_kpHGQgPl4c")
 		return true
 	}

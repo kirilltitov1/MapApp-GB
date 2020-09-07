@@ -15,6 +15,8 @@ target 'MapApp' do
 	
 	pod 'RealmSwift'
 	
+	pod 'SwiftyJSON'
+	
 #	pod 'Texture'
 
   target 'MapAppTests' do

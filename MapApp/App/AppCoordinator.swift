@@ -1,5 +1,5 @@
 //
-//  AppCoordinator2.swift
+//  AppCoordinator.swift
 //  MapApp
 //
 //  Created by Кирилл Титов on 07.09.2020.
@@ -8,18 +8,29 @@
 
 import RxSwift
 
-protocol Coordinator: class {
-	var childCoordinators : [Coordinator] { get set }
-	func start() -> Observable<Void>
+class AppCoordinator: BaseCoordinator {
+
+    var window = UIWindow(frame: UIScreen.main.bounds)
+
+    override func start() {
+        self.navigationController.navigationBar.isHidden = true
+        self.window.rootViewController = self.navigationController
+        self.window.makeKeyAndVisible()
+
+        // TODO: here you could check if user is signed in and show appropriate screen
+        let coordinator = AuthCoordinator()
+        coordinator.navigationController = self.navigationController
+        self.start(coordinator: coordinator)
+    }
 }
 
-extension Coordinator {
+protocol SignInListener {
+    func didSignIn()
+}
 
-    func add(coordinator: Coordinator) {
-        childCoordinators.append(coordinator)
-    }
-
-    func remove(coordinator: Coordinator) {
-        childCoordinators = childCoordinators.filter { $0 !== coordinator }
+extension AppCoordinator: SignInListener {
+    func didSignIn() {
+        print("Signed In")
+        // TODO: Navigate to Dashboard
     }
 }

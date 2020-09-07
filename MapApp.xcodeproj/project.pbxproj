@@ -28,6 +28,13 @@
 		E0D481DB752AE4DF52E7DBDB /* InitialInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDD13E70D0106E996FE59D /* InitialInitializer.swift */; };
 		EF02D5F124FCED45005A9125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF02D5F024FCED45005A9125 /* Main.storyboard */; };
 		EF02D5F324FCED8F005A9125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF02D5F224FCED8F005A9125 /* LaunchScreen.storyboard */; };
+		EF15E6AC25057176003B974E /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15E6AB25057176003B974E /* AuthModel.swift */; };
+		EF15E6AF250571E6003B974E /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15E6AE250571E6003B974E /* AuthViewModel.swift */; };
+		EF15E6B625057483003B974E /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15E6B525057483003B974E /* AuthView.swift */; };
+		EF15E6B825057597003B974E /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF15E6B725057597003B974E /* Auth.storyboard */; };
+		EF15E6BA250642BB003B974E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15E6B9250642BB003B974E /* AppCoordinator.swift */; };
+		EF15E6BC250648BE003B974E /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15E6BB250648BE003B974E /* BaseCoordinator.swift */; };
+		EF15E6BE25064D9A003B974E /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15E6BD25064D9A003B974E /* AuthCoordinator.swift */; };
 		EF32D46E24FBB1B200B65664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D46D24FBB1B200B65664 /* AppDelegate.swift */; };
 		EF32D47024FBB1B200B65664 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */; };
 		EF32D47724FBB1B300B65664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF32D47624FBB1B300B65664 /* Assets.xcassets */; };
@@ -83,6 +90,13 @@
 		ED77F916FDC772235DA70ABC /* InitialModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialModuleInput.swift; sourceTree = "<group>"; };
 		EF02D5F024FCED45005A9125 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EF02D5F224FCED8F005A9125 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF15E6AB25057176003B974E /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		EF15E6AE250571E6003B974E /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		EF15E6B525057483003B974E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		EF15E6B725057597003B974E /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		EF15E6B9250642BB003B974E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EF15E6BB250648BE003B974E /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		EF15E6BD25064D9A003B974E /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		EF32D46A24FBB1B200B65664 /* MapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF32D46D24FBB1B200B65664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +287,8 @@
 		EF02D5EB24FCE4A7005A9125 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				EF15E6B9250642BB003B974E /* AppCoordinator.swift */,
+				EF15E6BB250648BE003B974E /* BaseCoordinator.swift */,
 				EF32D46D24FBB1B200B65664 /* AppDelegate.swift */,
 				EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */,
 				EF02D5EE24FCE4FE005A9125 /* Assembly */,
@@ -287,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				EF02D5F024FCED45005A9125 /* Main.storyboard */,
+				EF15E6B725057597003B974E /* Auth.storyboard */,
 			);
 			path = Flowes;
 			sourceTree = "<group>";
@@ -308,6 +325,7 @@
 		EF02D5EF24FCE512005A9125 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				EF15E6AA25057158003B974E /* Auth */,
 				80CD71D11243CC14F7851107 /* Initial */,
 			);
 			path = BusinessLogic;
@@ -320,6 +338,49 @@
 				EF940CD824FE6E8D007BB2CA /* Sources */,
 			);
 			path = Environments;
+			sourceTree = "<group>";
+		};
+		EF15E6AA25057158003B974E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EF15E6BF25064D9E003B974E /* Coordinator */,
+				EF15E6B025057242003B974E /* Model */,
+				EF15E6B125057253003B974E /* ViewModel */,
+				EF15E6B22505726E003B974E /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EF15E6B025057242003B974E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF15E6AB25057176003B974E /* AuthModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF15E6B125057253003B974E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF15E6AE250571E6003B974E /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF15E6B22505726E003B974E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF15E6B525057483003B974E /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF15E6BF25064D9E003B974E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EF15E6BD25064D9A003B974E /* AuthCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		EF32D46124FBB1B200B65664 = {
@@ -517,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF15E6B825057597003B974E /* Auth.storyboard in Resources */,
 				EF02D5F324FCED8F005A9125 /* LaunchScreen.storyboard in Resources */,
 				EF32D47724FBB1B300B65664 /* Assets.xcassets in Resources */,
 				EF02D5F124FCED45005A9125 /* Main.storyboard in Resources */,
@@ -686,16 +748,22 @@
 				EF32D46E24FBB1B200B65664 /* AppDelegate.swift in Sources */,
 				EF32D47024FBB1B200B65664 /* SceneDelegate.swift in Sources */,
 				9888C0DF2F666CE9AAE3DE1F /* InitialViewInput.swift in Sources */,
+				EF15E6BC250648BE003B974E /* BaseCoordinator.swift in Sources */,
 				8F245C0002FDAEFFCD2B1F73 /* InitialViewOutput.swift in Sources */,
+				EF15E6BE25064D9A003B974E /* AuthCoordinator.swift in Sources */,
 				35C6F053BCEA265C80321CB9 /* InitialViewController.swift in Sources */,
 				8489FC41803FE4A3EDEF7E99 /* InitialModuleInput.swift in Sources */,
 				A7A8A31AF040623B4F1FF9AE /* InitialPresenter.swift in Sources */,
+				EF15E6AF250571E6003B974E /* AuthViewModel.swift in Sources */,
 				3E647645C3033A983646C462 /* InitialInteractorInput.swift in Sources */,
+				EF15E6BA250642BB003B974E /* AppCoordinator.swift in Sources */,
 				B8691E37CA163272A69D406C /* InitialInteractorOutput.swift in Sources */,
+				EF15E6AC25057176003B974E /* AuthModel.swift in Sources */,
 				EF940CDB24FE6F57007BB2CA /* LocationServise.swift in Sources */,
 				B1A76B20314B03BD5CA67033 /* InitialInteractor.swift in Sources */,
 				86D136C839F8687AEDEA104A /* InitialRouterInput.swift in Sources */,
 				FB77CD1C813CFFA48E513502 /* InitialRouter.swift in Sources */,
+				EF15E6B625057483003B974E /* AuthView.swift in Sources */,
 				9EFABCB48B1C99975EAFCA5E /* InitialConfigurator.swift in Sources */,
 				E0D481DB752AE4DF52E7DBDB /* InitialInitializer.swift in Sources */,
 			);
