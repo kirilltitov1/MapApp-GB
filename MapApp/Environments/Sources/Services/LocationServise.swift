@@ -18,5 +18,5 @@ extension LocationServiceInterface {
 }
 
 class LocationService: LocationServiceInterface {
-	
+
 }

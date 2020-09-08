@@ -10,27 +10,45 @@ import RxSwift
 
 class AppCoordinator: BaseCoordinator {
 
-    var window = UIWindow(frame: UIScreen.main.bounds)
+	var window: UIWindow!
 
-    override func start() {
+	override func start(window: UIWindow) {
+		self.window = window
+
         self.navigationController.navigationBar.isHidden = true
         self.window.rootViewController = self.navigationController
         self.window.makeKeyAndVisible()
 
-        // TODO: here you could check if user is signed in and show appropriate screen
         let coordinator = AuthCoordinator()
         coordinator.navigationController = self.navigationController
         self.start(coordinator: coordinator)
     }
 }
 
-protocol SignInListener {
+protocol AuthListener {
     func didSignIn()
 }
 
-extension AppCoordinator: SignInListener {
+extension AppCoordinator: AuthListener {
     func didSignIn() {
         print("Signed In")
-        // TODO: Navigate to Dashboard
+
+		let coordinator = MapCoordinator()
+		coordinator.navigationController = self.navigationController
+		self.start(coordinator: coordinator)
     }
+}
+
+protocol RegistrationListener {
+	func didRegister()
+}
+
+extension AppCoordinator: RegistrationListener {
+	func didRegister() {
+		print("Registred")
+
+		let coordinator = AuthCoordinator()
+		coordinator.navigationController = self.navigationController
+		self.start(coordinator: coordinator)
+	}
 }

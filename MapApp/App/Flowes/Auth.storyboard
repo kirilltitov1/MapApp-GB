@@ -48,12 +48,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGp-NI-723">
+                                <rect key="frame" x="323" y="52" width="83" height="30"/>
+                                <state key="normal" title="Registration"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="EeD-mx-LHk" firstAttribute="leading" secondItem="q5g-Br-41t" secondAttribute="leading" constant="16" id="B9R-7r-EAZ"/>
                             <constraint firstItem="EeD-mx-LHk" firstAttribute="top" secondItem="q5g-Br-41t" secondAttribute="top" constant="120" id="Jck-jc-MRS"/>
+                            <constraint firstItem="OGp-NI-723" firstAttribute="top" secondItem="q5g-Br-41t" secondAttribute="top" constant="8" id="K6s-lo-4Ud"/>
                             <constraint firstAttribute="trailing" secondItem="EeD-mx-LHk" secondAttribute="trailing" constant="16" id="Pdg-kp-yq9"/>
+                            <constraint firstAttribute="trailing" secondItem="OGp-NI-723" secondAttribute="trailing" constant="8" id="lxo-1c-fYf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q5g-Br-41t"/>
                     </view>
@@ -61,6 +67,7 @@
                         <outlet property="emailTextField" destination="jPV-Nk-fqP" id="WKz-EK-Nrn"/>
                         <outlet property="loginButton" destination="eVM-mX-cCs" id="wDf-Gu-hcV"/>
                         <outlet property="passwordTextField" destination="BLV-XS-ay5" id="kFc-46-qk4"/>
+                        <outlet property="registrationButton" destination="OGp-NI-723" id="O9h-3n-6fn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNe-0m-Vqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -24,13 +24,24 @@ class AuthCoordinator: BaseCoordinator {
         authViewModel.didSignIn
             .subscribe(onNext: { [weak self] in
                 guard let self = self else { return }
-				print("1")
                 self.navigationController.viewControllers = []
                 self.parentCoordinator?.didFinish(coordinator: self)
-                (self.parentCoordinator as? SignInListener)?.didSignIn()
-				print("2")
+                (self.parentCoordinator as? AuthListener)?.didSignIn()
             })
             .disposed(by: self.disposeBag)
+
+		// register
+		let registerCoordinator = RegisterCoordinator()
+		registerCoordinator.navigationController = self.navigationController
+
+		authViewModel.didRegisterTapped
+			.subscribe(onNext: { [weak self] in
+				guard let self = self else { return }
+				self.navigationController.viewControllers = []
+				self.parentCoordinator?.didFinish(coordinator: self)
+				self.parentCoordinator?.start(coordinator: registerCoordinator)
+			})
+			.disposed(by: disposeBag)
 
         self.navigationController.viewControllers = [authViewController]
     }

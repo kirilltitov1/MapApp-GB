@@ -16,6 +16,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+	@IBOutlet weak var registrationButton: UIButton!
 
     private let disposeBag = DisposeBag()
 
@@ -28,6 +29,7 @@ class AuthViewController: UIViewController {
     }
 
     private func setUpBindings() {
+		// auth bindings
         self.emailTextField.rx.text.orEmpty
             .bind(to: self.viewModel.emailAddress)
             .disposed(by: self.disposeBag)
@@ -57,5 +59,9 @@ class AuthViewController: UIViewController {
                 // show error
             })
             .disposed(by: self.disposeBag)
+
+		// register bindings
+		self.registrationButton.rx.tap.bind { [weak self] in self?.viewModel.registerTapped() }
+			.disposed(by: self.disposeBag)
     }
 }

@@ -6,24 +6,37 @@
 //  Copyright © 2020 Кирилл Титов. All rights reserved.
 //
 
-import Foundation
 import RxSwift
+import Alamofire
 
-struct AuthResponse {
-    let token: String
-    let userId: String
+struct AuthResponse: Codable {
+
+	let accessToken: String
+	let refreshToken: String
+	let expires: Int
 }
 
 protocol Auth {
-    func signIn() -> Single<AuthResponse>
+	func autn(email: String, password: String) -> Single<AuthResponse>
 }
 
 class AuthService: Auth {
-    func signIn() -> Single<AuthResponse> {
+	func autn(email: String, password: String) -> Single<AuthResponse> {
+		let url = Constants.Paths.userLoginStringURL
+		let parameters: [String : String] = ["email" : email,
+											 "password": password]
+
         return Single<AuthResponse>.create { single in
-            // call to backend
-			print("AuthService 'singIn'")
-            single(.success(AuthResponse(token: "12345", userId: "5678")))
+
+			AF.request(url, method: .post, parameters: parameters).responseDecodable(of: AuthResponse.self) { response in
+				switch response.result {
+				case let .success(success):
+					single(.success(success))
+				case let .failure(error):
+					print("AuthAPI.auth() \(error)")
+					single(.error(error))
+				}
+			}
             return Disposables.create()
         }
     }
