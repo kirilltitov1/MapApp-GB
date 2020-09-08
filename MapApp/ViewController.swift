@@ -8,14 +8,31 @@
 
 import UIKit
 import GoogleMaps
+import CoreLocation
 
 class ViewController: UIViewController {
 
 	@IBOutlet weak var mapView: GMSMapView!
 
+	private var locationManager: CLLocationManager?
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+
+		self.setupLocationManager()
 	}
 
+}
+
+// MARK: CORE LOCATION
+extension ViewController: CLLocationManagerDelegate {
+
+	private func setupLocationManager() {
+		locationManager = CLLocationManager()
+		locationManager?.requestWhenInUseAuthorization()
+	}
+
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+	}
 }
