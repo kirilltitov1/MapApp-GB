@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class RegisterViewModel {
 	private let disposeBag = DisposeBag()

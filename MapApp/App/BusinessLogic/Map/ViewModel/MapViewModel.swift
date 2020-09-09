@@ -7,7 +7,21 @@
 //
 
 import Foundation
+import RxSwift
 
 class MapViewModel {
+	private let disposeBag = DisposeBag()
 
+	
+
+	let isCompassPressed: Observable<Bool>
+
+	init() {
+		self.isCompassPressed = Observable.compactMap {return false}
+	}
+
+	func compassButtonTapped() {
+//
+	}
+	
 }
