@@ -601,8 +601,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF32D49424FBB1B300B65664 /* Build configuration list for PBXNativeTarget "MapApp" */;
 			buildPhases = (
-				EF056BFA24FC302000B23182 /* SwiftLint Script */,
 				305D32D8157CF11934994333 /* [CP] Check Pods Manifest.lock */,
+				EF056BFA24FC302000B23182 /* SwiftLint Script */,
 				EF32D46624FBB1B200B65664 /* Sources */,
 				EF32D46724FBB1B200B65664 /* Frameworks */,
 				EF32D46824FBB1B200B65664 /* Resources */,

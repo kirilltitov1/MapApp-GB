@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RealmSwift
 
 class AppCoordinator: BaseCoordinator {
 
@@ -18,6 +19,9 @@ class AppCoordinator: BaseCoordinator {
         self.navigationController.navigationBar.isHidden = true
         self.window.rootViewController = self.navigationController
         self.window.makeKeyAndVisible()
+		
+		let realm = try! Realm()
+		
 
         let coordinator = AuthCoordinator()
         coordinator.navigationController = self.navigationController
