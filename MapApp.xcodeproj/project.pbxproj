@@ -26,6 +26,7 @@
 		B8691E37CA163272A69D406C /* InitialInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD248E5D7FEE224B5AFD92 /* InitialInteractorOutput.swift */; };
 		C7A07F9BA179D4B93E971EDD /* Pods_MapApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C58B3BFF3B271E7E322F159 /* Pods_MapApp.framework */; };
 		E0D481DB752AE4DF52E7DBDB /* InitialInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDD13E70D0106E996FE59D /* InitialInitializer.swift */; };
+		EF00A5AD250A576F00B46913 /* CompassUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF00A5AC250A576F00B46913 /* CompassUIButton.swift */; };
 		EF02D5F124FCED45005A9125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF02D5F024FCED45005A9125 /* Main.storyboard */; };
 		EF02D5F324FCED8F005A9125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF02D5F224FCED8F005A9125 /* LaunchScreen.storyboard */; };
 		EF15E6AC25057176003B974E /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15E6AB25057176003B974E /* AuthModel.swift */; };
@@ -100,6 +101,7 @@
 		C545FE9A11B1AC7FC52BBAFC /* InitialViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		DF21F59927E7B876B9B38630 /* InitialViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialViewOutput.swift; sourceTree = "<group>"; };
 		ED77F916FDC772235DA70ABC /* InitialModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialModuleInput.swift; sourceTree = "<group>"; };
+		EF00A5AC250A576F00B46913 /* CompassUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassUIButton.swift; sourceTree = "<group>"; };
 		EF02D5F024FCED45005A9125 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EF02D5F224FCED8F005A9125 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF15E6AB25057176003B974E /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
@@ -527,6 +529,7 @@
 		EFC3E00B2507E11A00D85FED /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EF00A5AC250A576F00B46913 /* CompassUIButton.swift */,
 				EFC3E0112507E2E000D85FED /* MapViewModel.swift */,
 			);
 			path = ViewModel;
@@ -598,8 +601,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF32D49424FBB1B300B65664 /* Build configuration list for PBXNativeTarget "MapApp" */;
 			buildPhases = (
-				305D32D8157CF11934994333 /* [CP] Check Pods Manifest.lock */,
 				EF056BFA24FC302000B23182 /* SwiftLint Script */,
+				305D32D8157CF11934994333 /* [CP] Check Pods Manifest.lock */,
 				EF32D46624FBB1B200B65664 /* Sources */,
 				EF32D46724FBB1B200B65664 /* Frameworks */,
 				EF32D46824FBB1B200B65664 /* Resources */,
@@ -861,7 +864,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "#if which swiftlint >/dev/null; then\n#  swiftlint\n#else\n#  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -890,6 +893,7 @@
 				EF15E6AC25057176003B974E /* AuthModel.swift in Sources */,
 				EF940CDB24FE6F57007BB2CA /* LocationServise.swift in Sources */,
 				EFC3E0102507E1C100D85FED /* MapViewContoller.swift in Sources */,
+				EF00A5AD250A576F00B46913 /* CompassUIButton.swift in Sources */,
 				B1A76B20314B03BD5CA67033 /* InitialInteractor.swift in Sources */,
 				86D136C839F8687AEDEA104A /* InitialRouterInput.swift in Sources */,
 				FB77CD1C813CFFA48E513502 /* InitialRouter.swift in Sources */,

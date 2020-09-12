@@ -30,28 +30,29 @@ class RegisterViewController: UIViewController {
     private func setUpBindings() {
 		self.emailField.rx.text.orEmpty
 			.bind(to: self.viewModel.emailAddress)
-			.disposed(by: disposeBag)
+			.disposed(by: self.disposeBag)
 
 		self.password.rx.text.orEmpty
 			.bind(to: self.viewModel.password)
-			.disposed(by: disposeBag)
+			.disposed(by: self.disposeBag)
 
 		self.repeatPassword.rx.text.orEmpty
 			.bind(to: self.viewModel.repeatPassword)
-			.disposed(by: disposeBag)
+			.disposed(by: self.disposeBag)
 
-		self.registerButton.rx.tap.bind { [weak self] in self?.viewModel.registerTapped() }
-			.disposed(by: disposeBag)
+		self.registerButton.rx.tap
+			.bind { [weak self] in self?.viewModel.registerTapped() }
+			.disposed(by: self.disposeBag)
 
 		self.viewModel.isRegisterActive
 			.bind(to: self.registerButton.rx.isEnabled)
-			.disposed(by: disposeBag)
+			.disposed(by: self.disposeBag)
 
 		self.viewModel.didRegister
 			.subscribe(onNext: {
 				print("Registred")
 			})
-			.disposed(by: disposeBag)
+			.disposed(by: self.disposeBag)
 
 		self.viewModel.didFailRegister
 		.subscribe(onNext: { error in

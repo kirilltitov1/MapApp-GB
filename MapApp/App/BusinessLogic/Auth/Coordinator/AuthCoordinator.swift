@@ -37,9 +37,8 @@ class AuthCoordinator: BaseCoordinator {
 		authViewModel.didRegisterTapped
 			.subscribe(onNext: { [weak self] in
 				guard let self = self else { return }
-				self.navigationController.viewControllers = []
-				self.parentCoordinator?.didFinish(coordinator: self)
-				self.parentCoordinator?.start(coordinator: registerCoordinator)
+				self.navigationController.setNavigationBarHidden(false, animated: true)
+				self.start(coordinator: registerCoordinator)
 			})
 			.disposed(by: disposeBag)
 

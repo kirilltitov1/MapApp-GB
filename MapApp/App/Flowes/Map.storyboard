@@ -19,20 +19,69 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bXX-8N-xKz">
+                                <rect key="frame" x="348" y="446" width="50" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICI-dN-cY0">
+                                        <rect key="frame" x="0.0" y="0.5" width="50" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ICI-dN-cY0" secondAttribute="height" id="d7S-o6-NTe"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="arrow.up.right.circle.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKP-R3-D9A">
+                                        <rect key="frame" x="0.0" y="52" width="50" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="JKP-R3-D9A" secondAttribute="height" id="61U-6g-FxI"/>
+                                            <constraint firstAttribute="width" constant="50" id="euD-5u-zoi"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="plus" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gb-Yy-74t">
+                                        <rect key="frame" x="0.0" y="108.5" width="50" height="13.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0gb-Yy-74t" secondAttribute="height" multiplier="1.66" id="KLI-7u-5Ej"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="minus" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0gb-Yy-74t" firstAttribute="width" secondItem="JKP-R3-D9A" secondAttribute="height" multiplier="1:1" id="gMg-i6-Lev"/>
+                                    <constraint firstItem="JKP-R3-D9A" firstAttribute="width" secondItem="ICI-dN-cY0" secondAttribute="height" multiplier="1:1" id="sHe-EG-I5n"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="04M-nA-RVt" firstAttribute="trailing" secondItem="bXX-8N-xKz" secondAttribute="trailing" constant="16" id="8iw-Is-hOw"/>
                             <constraint firstItem="hFO-cn-X7A" firstAttribute="leading" secondItem="04M-nA-RVt" secondAttribute="leading" id="Pik-3A-DYy"/>
+                            <constraint firstItem="bXX-8N-xKz" firstAttribute="centerY" secondItem="hFO-cn-X7A" secondAttribute="centerY" constant="80" id="bkb-Ys-E7v"/>
                             <constraint firstItem="04M-nA-RVt" firstAttribute="trailing" secondItem="hFO-cn-X7A" secondAttribute="trailing" id="icI-y0-4UP"/>
                             <constraint firstItem="04M-nA-RVt" firstAttribute="bottom" secondItem="hFO-cn-X7A" secondAttribute="bottom" id="qKf-OP-Dep"/>
                             <constraint firstItem="hFO-cn-X7A" firstAttribute="top" secondItem="S3O-Pl-H49" secondAttribute="top" id="wRd-3p-dP0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="04M-nA-RVt"/>
                     </view>
+                    <connections>
+                        <outlet property="compassButton" destination="ICI-dN-cY0" id="JE9-Oi-tJs"/>
+                        <outlet property="mapView" destination="hFO-cn-X7A" id="cVh-zG-40w"/>
+                        <outlet property="minusButton" destination="0gb-Yy-74t" id="5wC-2g-IjN"/>
+                        <outlet property="plusButtob" destination="JKP-R3-D9A" id="Mev-Xv-b6c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIa-Em-4NQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124.6376811594203" y="96.428571428571431"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.up.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

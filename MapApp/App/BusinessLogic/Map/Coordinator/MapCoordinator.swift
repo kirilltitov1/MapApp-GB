@@ -14,19 +14,13 @@ class MapCoordinator: BaseCoordinator {
 		let viewController = UIStoryboard.init(name: "Map", bundle: nil).instantiateInitialViewController()
         guard let mapViewController = viewController as? MapViewController else { return }
 
-        // Coordinator initializes and injects viewModel
-//        let mapViewModel = MapViewModel()
-//        authViewController.viewModel = authViewModel
+        // MARK: MODELS
+		let location = LocationModel()
+
+		let mapViewModel = MapViewModel(location: location)
+        mapViewController.viewModel = mapViewModel
 
         // Coordinator subscribes to events and notifies parentCoordinator
-//        authViewModel.didSignIn
-//            .subscribe(onNext: { [weak self] in
-//                guard let self = self else { return }
-//                self.navigationController.viewControllers = []
-//                self.parentCoordinator?.didFinish(coordinator: self)
-//                (self.parentCoordinator as? AuthListener)?.didSignIn()
-//            })
-//            .disposed(by: self.disposeBag)
 
         self.navigationController.viewControllers = [mapViewController]
 	}

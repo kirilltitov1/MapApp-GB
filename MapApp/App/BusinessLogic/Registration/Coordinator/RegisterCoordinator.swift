@@ -26,10 +26,11 @@ class RegisterCoordinator: BaseCoordinator {
 			guard let self = self else { return }
 			self.navigationController.viewControllers = []
 			self.parentCoordinator?.didFinish(coordinator: self)
+			self.navigationController.setNavigationBarHidden(false, animated: true)
 			(self.parentCoordinator as? RegistrationListener)?.didRegister()
 		})
 		.disposed(by: disposeBag)
 
-		self.navigationController.viewControllers = [regViewController]
+		self.navigationController.viewControllers.append(regViewController)
 	}
 }
