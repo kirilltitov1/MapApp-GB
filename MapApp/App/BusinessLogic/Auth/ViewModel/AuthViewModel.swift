@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RealmSwift
 
 class AuthViewModel {
 
@@ -30,6 +31,7 @@ class AuthViewModel {
 	}
 
 	func signInTapped() {
+		if checkAdmin() { return }
 		do {
 			self.authentication.autn(email: try emailAddress.value(),
 									 password: try password.value())
@@ -44,6 +46,27 @@ class AuthViewModel {
 		} catch let error {
 			print(error)
 		}
+	}
+
+	func checkAdmin() -> Bool {
+		let realm = try! Realm()
+		let admin = User()
+		admin.email = "admin"
+		admin.password = "admin"
+		
+		do {
+			let email = try emailAddress.value()
+			if let userRealm = realm.objects(User.self).filter("email == '\(email)'").first {
+				if userRealm == admin {
+					print("\nADMIN")
+					self.didSignIn.onNext(())
+					return true
+				}
+			}
+		} catch let error {
+			print(error)
+		}
+		return false
 	}
 
 	func registerTapped() {

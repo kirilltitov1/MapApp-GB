@@ -21,7 +21,24 @@ class AppCoordinator: BaseCoordinator {
         self.window.makeKeyAndVisible()
 		
 		let realm = try! Realm()
+		let user = User()
+		user.email = "admin"
+		user.password = "admin"
 		
+//		try! realm.write {
+//		  realm.deleteAll()
+//		}
+		
+		do {
+			if (realm.objects(User.self).filter("email == 'admin'").first == nil) {
+				try realm.write {
+					realm.add(user)
+					print("admin added")
+				}
+			}
+		} catch let error {
+			print(error)
+		}
 
         let coordinator = AuthCoordinator()
         coordinator.navigationController = self.navigationController

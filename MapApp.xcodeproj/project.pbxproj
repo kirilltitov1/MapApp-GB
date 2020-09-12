@@ -55,6 +55,7 @@
 		EFC3E0202507F2AD00D85FED /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC3E01F2507F2AD00D85FED /* RegisterModel.swift */; };
 		EFC3E0222507F2BB00D85FED /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC3E0212507F2BB00D85FED /* RegisterCoordinator.swift */; };
 		EFC3E0242507F53300D85FED /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC3E0232507F53300D85FED /* Register.storyboard */; };
+		EFFC3F20250D4F6F00E37710 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC3F1F250D4F6F00E37710 /* User.swift */; };
 		FB77CD1C813CFFA48E513502 /* InitialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73188E89274534223F8B7E3A /* InitialRouter.swift */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		EFC3E01F2507F2AD00D85FED /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		EFC3E0212507F2BB00D85FED /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		EFC3E0232507F53300D85FED /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		EFFC3F1F250D4F6F00E37710 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F72D31CC7B682D0148A3E3D9 /* Pods-MapAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MapAppTests/Pods-MapAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -340,6 +342,7 @@
 		EF02D5ED24FCE4E4005A9125 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				EFFC3F1F250D4F6F00E37710 /* User.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -897,6 +900,7 @@
 				B1A76B20314B03BD5CA67033 /* InitialInteractor.swift in Sources */,
 				86D136C839F8687AEDEA104A /* InitialRouterInput.swift in Sources */,
 				FB77CD1C813CFFA48E513502 /* InitialRouter.swift in Sources */,
+				EFFC3F20250D4F6F00E37710 /* User.swift in Sources */,
 				EFC3E0082507E08C00D85FED /* MapCoordinator.swift in Sources */,
 				EF15E6B625057483003B974E /* AuthViewController.swift in Sources */,
 				9EFABCB48B1C99975EAFCA5E /* InitialConfigurator.swift in Sources */,

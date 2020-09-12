@@ -34,6 +34,7 @@ class LocationModel: NSObject, Location {
 	private var locationManager: CLLocationManager!
 
 	public var didUpdateLocation = BehaviorSubject<CLLocation>(value: CLLocation())
+	
 
 	override init() {
 		super.init()
@@ -44,6 +45,7 @@ class LocationModel: NSObject, Location {
 	private func configurateLocationManager() {
 		locationManager = CLLocationManager()
 		locationManager.delegate = self
+		locationManager.allowsBackgroundLocationUpdates = true
 		locationManager.requestWhenInUseAuthorization()
 		self.startUpdatingLocation()
 	}
