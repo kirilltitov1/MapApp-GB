@@ -8,12 +8,14 @@
 
 import UIKit
 import GoogleMaps
+import RxSwift
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+
 		GMSServices.provideAPIKey("AIzaSyBkCDfpgjs7U0yAfw32-NGt_kpHGQgPl4c")
 		return true
 	}
@@ -23,6 +25,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
 		// Called when a new scene session is being created.
 		// Use this method to select a configuration to create the new scene with.
+
+		let center = UNUserNotificationCenter.current()
+		
+		center.requestAuthorization(options: [.alert, .badge]) { state, error in
+			if state {
+				print("✅ access to push received")
+			} else {
+				print("⚠️ push access denied")
+			}
+		}
+		
+		center.getNotificationSettings { settings in
+			switch settings.authorizationStatus {
+			case .authorized:
+				print("✅ access to push received")
+			case .denied:
+				print("⚠️ push access denied")
+			@unknown default:
+				break
+			}
+			
+		}
+
 		return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
 	}
 
@@ -31,5 +56,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
 		// Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 	}
-
 }

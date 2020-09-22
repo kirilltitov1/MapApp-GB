@@ -29,7 +29,21 @@ test_group_path: MapAppTests
 podfile_path: Podfile
 
 ### Templates
+catalogs:
+- 'https://github.com/paperkite/generamba-catalog'
+
+
+### Templates
 templates:
 - {name: rviper_controller}
-- {name: mvvm_controller}
+# - {name: mvvm_controller}
 - {name: swifty_viper}
+
+- {name: mvvm_ios}
+- {name: mvvm_reactiveswift_tableview_ios}
+- {name: mvvm_reactiveswift_collectionview_ios}
+- {name: mvvm_rxswift_tableview_ios}
+- {name: mvvm_rxswift_collectionview_ios}
+- {name: viper_ios}
+- {name: viper_tableview_ios}
+- {name: viper_collectionview_ios}

@@ -12,11 +12,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	var window: UIWindow?
 
+	let appCoordinator = AppCoordinator()
+
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-		// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-		// If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-		guard let _ = (scene as? UIWindowScene) else { return }
+
+		guard let windowScene = (scene as? UIWindowScene) else { return }
+
+		window = UIWindow(windowScene: windowScene)
+
+		self.appCoordinator.start(window: window!)
 	}
 
 	func sceneDidDisconnect(_ scene: UIScene) {
@@ -24,19 +28,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// This occurs shortly after the scene enters the background, or when its session is discarded.
 		// Release any resources associated with this scene that can be re-created the next time the scene connects.
 		// The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+		sendNotificationRequest(content: makeNotificationContent(), trigger: makeNotificationTrigger())
 	}
 
 	func sceneDidBecomeActive(_ scene: UIScene) {
+		window?.viewWithTag(1001)?.removeFromSuperview()
 		// Called when the scene has moved from an inactive state to an active state.
 		// Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
 	}
 
 	func sceneWillResignActive(_ scene: UIScene) {
-		// Called when the scene will move from an active state to an inactive state.
-		// This may occur due to temporary interruptions (ex. an incoming phone call).
+		let blurEffect = UIBlurEffect(style: .extraLight)
+		let blerView = UIVisualEffectView(effect: blurEffect)
+		if let rootViewController = window?.rootViewController {
+			blerView.frame = rootViewController.view.bounds
+			blerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+			blerView.tag = 1001
+			window?.addSubview(blerView)
+		}
+
+		sendNotificationRequest(content: makeNotificationContent(), trigger: makeNotificationTrigger())
 	}
 
 	func sceneWillEnterForeground(_ scene: UIScene) {
+		
 		// Called as the scene transitions from the background to the foreground.
 		// Use this method to undo the changes made on entering the background.
 	}
@@ -47,4 +62,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// to restore the scene back to its current state.
 	}
 
+	func makeNotificationContent() -> UNNotificationContent {
+		let content = UNMutableNotificationContent()
+
+		content.title = "⚠️ Приложение скрыто ⚠️"
+		content.subtitle = "Последний шанс вернуться !"
+
+		content.badge = 1
+
+		return content
+	}
+
+	func makeNotificationTrigger() -> UNNotificationTrigger {
+		return UNTimeIntervalNotificationTrigger(timeInterval: 60*30, repeats: false)
+	}
+
+	func sendNotificationRequest(content: UNNotificationContent, trigger: UNNotificationTrigger) {
+		let request = UNNotificationRequest(identifier: "alarm", content: content, trigger: trigger)
+
+		let center = UNUserNotificationCenter.current()
+
+		center.add(request) { error in
+			if let error = error {
+				print(error.localizedDescription)
+			}
+		}
+	}
 }
