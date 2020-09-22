@@ -55,6 +55,8 @@
 		EFC3E0202507F2AD00D85FED /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC3E01F2507F2AD00D85FED /* RegisterModel.swift */; };
 		EFC3E0222507F2BB00D85FED /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC3E0212507F2BB00D85FED /* RegisterCoordinator.swift */; };
 		EFC3E0242507F53300D85FED /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC3E0232507F53300D85FED /* Register.storyboard */; };
+		EFF3E7D5251A7BD10078BB82 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF3E7D4251A7BD10078BB82 /* AudioToolbox.framework */; };
+		EFF3E7E0251A7C610078BB82 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF3E7DF251A7C610078BB82 /* ExternalAccessory.framework */; };
 		EFFC3F20250D4F6F00E37710 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC3F1F250D4F6F00E37710 /* User.swift */; };
 		FB77CD1C813CFFA48E513502 /* InitialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73188E89274534223F8B7E3A /* InitialRouter.swift */; };
 /* End PBXBuildFile section */
@@ -137,6 +139,8 @@
 		EFC3E01F2507F2AD00D85FED /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		EFC3E0212507F2BB00D85FED /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		EFC3E0232507F53300D85FED /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		EFF3E7D4251A7BD10078BB82 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EFF3E7DF251A7C610078BB82 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		EFFC3F1F250D4F6F00E37710 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F72D31CC7B682D0148A3E3D9 /* Pods-MapAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MapAppTests/Pods-MapAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,7 +150,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF3E7E0251A7C610078BB82 /* ExternalAccessory.framework in Frameworks */,
 				C7A07F9BA179D4B93E971EDD /* Pods_MapApp.framework in Frameworks */,
+				EFF3E7D5251A7BD10078BB82 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +294,8 @@
 		EDBA0FD75C25C68F5C6528C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFF3E7DF251A7C610078BB82 /* ExternalAccessory.framework */,
+				EFF3E7D4251A7BD10078BB82 /* AudioToolbox.framework */,
 				9C58B3BFF3B271E7E322F159 /* Pods_MapApp.framework */,
 				ABAB0902BC48B24455822739 /* Pods_MapAppTests.framework */,
 				0EF9577A4784D8E7E4395FEE /* Pods_MapAppUITests.framework */,
@@ -1069,6 +1077,7 @@
 			baseConfigurationReference = 75489387BA42A2C99F4AA396 /* Pods-MapApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MapApp/MapApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9396A9KSNU;
 				INFOPLIST_FILE = MapApp/Environments/Assets/Info.plist;
@@ -1088,6 +1097,7 @@
 			baseConfigurationReference = 60DCB1DF6A77712201DE997E /* Pods-MapApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MapApp/MapApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9396A9KSNU;
 				INFOPLIST_FILE = MapApp/Environments/Assets/Info.plist;

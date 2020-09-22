@@ -28,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// This occurs shortly after the scene enters the background, or when its session is discarded.
 		// Release any resources associated with this scene that can be re-created the next time the scene connects.
 		// The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+		sendNotificationRequest(content: makeNotificationContent(), trigger: makeNotificationTrigger())
 	}
 
 	func sceneDidBecomeActive(_ scene: UIScene) {
@@ -45,6 +46,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			blerView.tag = 1001
 			window?.addSubview(blerView)
 		}
+
+		sendNotificationRequest(content: makeNotificationContent(), trigger: makeNotificationTrigger())
 	}
 
 	func sceneWillEnterForeground(_ scene: UIScene) {
@@ -59,4 +62,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// to restore the scene back to its current state.
 	}
 
+	func makeNotificationContent() -> UNNotificationContent {
+		let content = UNMutableNotificationContent()
+
+		content.title = "⚠️ Приложение скрыто ⚠️"
+		content.subtitle = "Последний шанс вернуться !"
+
+		content.badge = 1
+
+		return content
+	}
+
+	func makeNotificationTrigger() -> UNNotificationTrigger {
+		return UNTimeIntervalNotificationTrigger(timeInterval: 60*30, repeats: false)
+	}
+
+	func sendNotificationRequest(content: UNNotificationContent, trigger: UNNotificationTrigger) {
+		let request = UNNotificationRequest(identifier: "alarm", content: content, trigger: trigger)
+
+		let center = UNUserNotificationCenter.current()
+
+		center.add(request) { error in
+			if let error = error {
+				print(error.localizedDescription)
+			}
+		}
+	}
 }
