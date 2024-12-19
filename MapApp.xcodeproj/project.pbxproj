@@ -7,17 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19C9771734052FDDE6844402 /* InitialConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C84AC96174D8205F1CE59D /* InitialConfiguratorTests.swift */; };
 		1F387648A9A0E789DBE7143D /* Pods_MapAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E41227DC83FBAF1546A7963 /* Pods_MapAppUITests.framework */; };
 		2EAF43D56D5522E1B13C4D51 /* Pods_MapApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88DC2151C63CD91EF146E73 /* Pods_MapApp.framework */; };
+		313EE4380C06302D1AF34CF1 /* InitialPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CA94832CBF5E8A469F7E8C /* InitialPresenterTests.swift */; };
+		35C6F053BCEA265C80321CB9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545FE9A11B1AC7FC52BBAFC /* InitialViewController.swift */; };
+		3E647645C3033A983646C462 /* InitialInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95FCC79B0155220F831896 /* InitialInteractorInput.swift */; };
+		48EACBFEC0EE121CE75C62A3 /* InitialViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B74764AA782BEDD004FA6C9 /* InitialViewTests.swift */; };
+		6F8414B79EF671D083CF9FCC /* InitialInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EC0AC513EEC844CFD6C7D /* InitialInteractorTests.swift */; };
+		82F876435CBF6F3645C34A7C /* InitialRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A83654751ACC21E897DCBC2 /* InitialRouterTests.swift */; };
+		8489FC41803FE4A3EDEF7E99 /* InitialModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED77F916FDC772235DA70ABC /* InitialModuleInput.swift */; };
+		86D136C839F8687AEDEA104A /* InitialRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129C4D1BD95D21FEA894BCFB /* InitialRouterInput.swift */; };
+		8F245C0002FDAEFFCD2B1F73 /* InitialViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF21F59927E7B876B9B38630 /* InitialViewOutput.swift */; };
+		9888C0DF2F666CE9AAE3DE1F /* InitialViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ECCFE281744B2038196824 /* InitialViewInput.swift */; };
+		9EFABCB48B1C99975EAFCA5E /* InitialConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783F11801BA536A52C24441 /* InitialConfigurator.swift */; };
+		A7A8A31AF040623B4F1FF9AE /* InitialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE6E2064543D603C34C7124 /* InitialPresenter.swift */; };
+		B1A76B20314B03BD5CA67033 /* InitialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB09B98AA775AF93D48B4B /* InitialInteractor.swift */; };
+		B8691E37CA163272A69D406C /* InitialInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD248E5D7FEE224B5AFD92 /* InitialInteractorOutput.swift */; };
 		CA559EF192F1EA1989ADDFF1 /* Pods_MapAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002E5DFA73886FDB05355493 /* Pods_MapAppTests.framework */; };
+		E0D481DB752AE4DF52E7DBDB /* InitialInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDD13E70D0106E996FE59D /* InitialInitializer.swift */; };
+		EF02D5F124FCED45005A9125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF02D5F024FCED45005A9125 /* Main.storyboard */; };
+		EF02D5F324FCED8F005A9125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF02D5F224FCED8F005A9125 /* LaunchScreen.storyboard */; };
 		EF32D46E24FBB1B200B65664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D46D24FBB1B200B65664 /* AppDelegate.swift */; };
 		EF32D47024FBB1B200B65664 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */; };
-		EF32D47224FBB1B200B65664 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D47124FBB1B200B65664 /* ViewController.swift */; };
-		EF32D47524FBB1B200B65664 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF32D47324FBB1B200B65664 /* Main.storyboard */; };
 		EF32D47724FBB1B300B65664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF32D47624FBB1B300B65664 /* Assets.xcassets */; };
-		EF32D47A24FBB1B300B65664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF32D47824FBB1B300B65664 /* LaunchScreen.storyboard */; };
 		EF32D48524FBB1B300B65664 /* MapAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D48424FBB1B300B65664 /* MapAppTests.swift */; };
 		EF32D49024FBB1B300B65664 /* MapAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32D48F24FBB1B300B65664 /* MapAppUITests.swift */; };
+		EF940CDB24FE6F57007BB2CA /* LocationServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF940CDA24FE6F57007BB2CA /* LocationServise.swift */; };
+		EF940CDD24FE77CF007BB2CA /* showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF940CDC24FE77CF007BB2CA /* showAlert.swift */; };
+		FB77CD1C813CFFA48E513502 /* InitialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73188E89274534223F8B7E3A /* InitialRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,20 +58,36 @@
 /* Begin PBXFileReference section */
 		002E5DFA73886FDB05355493 /* Pods_MapAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D4B1A02D57B6D3CA5E468A /* Pods-MapApp-MapAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapApp-MapAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MapApp-MapAppUITests/Pods-MapApp-MapAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0BDD248E5D7FEE224B5AFD92 /* InitialInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialInteractorOutput.swift; sourceTree = "<group>"; };
+		129C4D1BD95D21FEA894BCFB /* InitialRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialRouterInput.swift; sourceTree = "<group>"; };
+		1783F11801BA536A52C24441 /* InitialConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialConfigurator.swift; sourceTree = "<group>"; };
+		18DDD13E70D0106E996FE59D /* InitialInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialInitializer.swift; sourceTree = "<group>"; };
+		23CA94832CBF5E8A469F7E8C /* InitialPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialPresenterTests.swift; sourceTree = "<group>"; };
+		28CB09B98AA775AF93D48B4B /* InitialInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialInteractor.swift; sourceTree = "<group>"; };
+		2B4EC0AC513EEC844CFD6C7D /* InitialInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialInteractorTests.swift; sourceTree = "<group>"; };
+		2B74764AA782BEDD004FA6C9 /* InitialViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialViewTests.swift; sourceTree = "<group>"; };
+		4A83654751ACC21E897DCBC2 /* InitialRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialRouterTests.swift; sourceTree = "<group>"; };
+		4C95FCC79B0155220F831896 /* InitialInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialInteractorInput.swift; sourceTree = "<group>"; };
+		57ECCFE281744B2038196824 /* InitialViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialViewInput.swift; sourceTree = "<group>"; };
+		6AE6E2064543D603C34C7124 /* InitialPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialPresenter.swift; sourceTree = "<group>"; };
 		6E41227DC83FBAF1546A7963 /* Pods_MapAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73188E89274534223F8B7E3A /* InitialRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialRouter.swift; sourceTree = "<group>"; };
 		982B66D1A73B27EF77A7AF8C /* Pods-MapAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MapAppUITests/Pods-MapAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6C84AC96174D8205F1CE59D /* InitialConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialConfiguratorTests.swift; sourceTree = "<group>"; };
 		B1959A7636F2B261C172AAAD /* Pods-MapApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapApp.debug.xcconfig"; path = "Target Support Files/Pods-MapApp/Pods-MapApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B880D498BA35CCDF66503E7D /* Pods-MapApp-MapAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapApp-MapAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MapApp-MapAppUITests/Pods-MapApp-MapAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF10037791DF3853796142F7 /* Pods-MapAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapAppTests.release.xcconfig"; path = "Target Support Files/Pods-MapAppTests/Pods-MapAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C545FE9A11B1AC7FC52BBAFC /* InitialViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		C5F0DCA1465CBA5ACA542E20 /* Pods-MapApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapApp.release.xcconfig"; path = "Target Support Files/Pods-MapApp/Pods-MapApp.release.xcconfig"; sourceTree = "<group>"; };
 		D783ACBEBA80F221ED21B0B5 /* Pods-MapAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MapAppUITests/Pods-MapAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DF21F59927E7B876B9B38630 /* InitialViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialViewOutput.swift; sourceTree = "<group>"; };
+		ED77F916FDC772235DA70ABC /* InitialModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InitialModuleInput.swift; sourceTree = "<group>"; };
+		EF02D5F024FCED45005A9125 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EF02D5F224FCED8F005A9125 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF32D46A24FBB1B200B65664 /* MapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF32D46D24FBB1B200B65664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF32D47124FBB1B200B65664 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EF32D47424FBB1B200B65664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF32D47624FBB1B300B65664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EF32D47924FBB1B300B65664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF32D47B24FBB1B300B65664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF32D48024FBB1B300B65664 /* MapAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF32D48424FBB1B300B65664 /* MapAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAppTests.swift; sourceTree = "<group>"; };
@@ -61,6 +95,8 @@
 		EF32D48B24FBB1B300B65664 /* MapAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF32D48F24FBB1B300B65664 /* MapAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAppUITests.swift; sourceTree = "<group>"; };
 		EF32D49124FBB1B300B65664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF940CDA24FE6F57007BB2CA /* LocationServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServise.swift; sourceTree = "<group>"; };
+		EF940CDC24FE77CF007BB2CA /* showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showAlert.swift; sourceTree = "<group>"; };
 		F88DC2151C63CD91EF146E73 /* Pods_MapApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9DDB7915814ABE3E72C687E /* Pods-MapAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MapAppTests/Pods-MapAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +139,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		09512DAD5EA9F8E298C91D4E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4A83654751ACC21E897DCBC2 /* InitialRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0A5DE1CDB812A1372BCA730D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2B4EC0AC513EEC844CFD6C7D /* InitialInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		1BD6C49BFBE9A634269A6C4C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +168,162 @@
 				D783ACBEBA80F221ED21B0B5 /* Pods-MapAppUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		37CA99A59FBC187B3AB59036 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				F995437796C3A680B334917B /* Configurator */,
+				90059BAC55CC94AA6DF08DBD /* View */,
+				0A5DE1CDB812A1372BCA730D /* Interactor */,
+				CD28B8B7A4D3859821BBC9C7 /* Presenter */,
+				09512DAD5EA9F8E298C91D4E /* Router */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		49FCE9A806E611BFA46CDA2D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED77F916FDC772235DA70ABC /* InitialModuleInput.swift */,
+				6AE6E2064543D603C34C7124 /* InitialPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5F18BB3747A9A973BB189CF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57ECCFE281744B2038196824 /* InitialViewInput.swift */,
+				DF21F59927E7B876B9B38630 /* InitialViewOutput.swift */,
+				C545FE9A11B1AC7FC52BBAFC /* InitialViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80CD71D11243CC14F7851107 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				5F18BB3747A9A973BB189CF5 /* View */,
+				49FCE9A806E611BFA46CDA2D /* Presenter */,
+				D01F87BB2B8E61C743A2E6B9 /* Interactor */,
+				B5A6FDB0F8575BD9689B91ED /* Router */,
+				D4AD4CB36406488043DA5465 /* Configurator */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		90059BAC55CC94AA6DF08DBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B74764AA782BEDD004FA6C9 /* InitialViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5A6FDB0F8575BD9689B91ED /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				129C4D1BD95D21FEA894BCFB /* InitialRouterInput.swift */,
+				73188E89274534223F8B7E3A /* InitialRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CD28B8B7A4D3859821BBC9C7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				23CA94832CBF5E8A469F7E8C /* InitialPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D01F87BB2B8E61C743A2E6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4C95FCC79B0155220F831896 /* InitialInteractorInput.swift */,
+				0BDD248E5D7FEE224B5AFD92 /* InitialInteractorOutput.swift */,
+				28CB09B98AA775AF93D48B4B /* InitialInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D4AD4CB36406488043DA5465 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				1783F11801BA536A52C24441 /* InitialConfigurator.swift */,
+				18DDD13E70D0106E996FE59D /* InitialInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		EF02D5E924FCE469005A9125 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				EF32D47624FBB1B300B65664 /* Assets.xcassets */,
+				EF02D5F224FCED8F005A9125 /* LaunchScreen.storyboard */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		EF02D5EA24FCE499005A9125 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EF940CDC24FE77CF007BB2CA /* showAlert.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EF02D5EB24FCE4A7005A9125 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EF32D46D24FBB1B200B65664 /* AppDelegate.swift */,
+				EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */,
+				EF02D5EE24FCE4FE005A9125 /* Assembly */,
+				EF02D5ED24FCE4E4005A9125 /* Entity */,
+				EF02D5EC24FCE4C2005A9125 /* Flowes */,
+				EF02D5EF24FCE512005A9125 /* BusinessLogic */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EF02D5EC24FCE4C2005A9125 /* Flowes */ = {
+			isa = PBXGroup;
+			children = (
+				EF02D5F024FCED45005A9125 /* Main.storyboard */,
+			);
+			path = Flowes;
+			sourceTree = "<group>";
+		};
+		EF02D5ED24FCE4E4005A9125 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EF02D5EE24FCE4FE005A9125 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EF02D5EF24FCE512005A9125 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				80CD71D11243CC14F7851107 /* Initial */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		EF056BFB24FCE3BD00B23182 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				EF940CD724FE6E86007BB2CA /* Assets */,
+				EF940CD824FE6E8D007BB2CA /* Sources */,
+			);
+			path = Environments;
 			sourceTree = "<group>";
 		};
 		EF32D46124FBB1B200B65664 = {
@@ -143,13 +351,10 @@
 		EF32D46C24FBB1B200B65664 /* MapApp */ = {
 			isa = PBXGroup;
 			children = (
-				EF32D46D24FBB1B200B65664 /* AppDelegate.swift */,
-				EF32D46F24FBB1B200B65664 /* SceneDelegate.swift */,
-				EF32D47124FBB1B200B65664 /* ViewController.swift */,
-				EF32D47324FBB1B200B65664 /* Main.storyboard */,
-				EF32D47624FBB1B300B65664 /* Assets.xcassets */,
-				EF32D47824FBB1B300B65664 /* LaunchScreen.storyboard */,
-				EF32D47B24FBB1B300B65664 /* Info.plist */,
+				EF056BFB24FCE3BD00B23182 /* Environments */,
+				EF02D5E924FCE469005A9125 /* Resourse */,
+				EF02D5EA24FCE499005A9125 /* Utils */,
+				EF02D5EB24FCE4A7005A9125 /* App */,
 			);
 			path = MapApp;
 			sourceTree = "<group>";
@@ -159,6 +364,7 @@
 			children = (
 				EF32D48424FBB1B300B65664 /* MapAppTests.swift */,
 				EF32D48624FBB1B300B65664 /* Info.plist */,
+				37CA99A59FBC187B3AB59036 /* Initial */,
 			);
 			path = MapAppTests;
 			sourceTree = "<group>";
@@ -170,6 +376,38 @@
 				EF32D49124FBB1B300B65664 /* Info.plist */,
 			);
 			path = MapAppUITests;
+			sourceTree = "<group>";
+		};
+		EF940CD724FE6E86007BB2CA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EF32D47B24FBB1B300B65664 /* Info.plist */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EF940CD824FE6E8D007BB2CA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EF940CD924FE6E94007BB2CA /* Services */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EF940CD924FE6E94007BB2CA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EF940CDA24FE6F57007BB2CA /* LocationServise.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F995437796C3A680B334917B /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				A6C84AC96174D8205F1CE59D /* InitialConfiguratorTests.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +520,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF32D47A24FBB1B300B65664 /* LaunchScreen.storyboard in Resources */,
+				EF02D5F324FCED8F005A9125 /* LaunchScreen.storyboard in Resources */,
 				EF32D47724FBB1B300B65664 /* Assets.xcassets in Resources */,
-				EF32D47524FBB1B200B65664 /* Main.storyboard in Resources */,
+				EF02D5F124FCED45005A9125 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,9 +668,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF32D47224FBB1B200B65664 /* ViewController.swift in Sources */,
+				EF940CDD24FE77CF007BB2CA /* showAlert.swift in Sources */,
 				EF32D46E24FBB1B200B65664 /* AppDelegate.swift in Sources */,
 				EF32D47024FBB1B200B65664 /* SceneDelegate.swift in Sources */,
+				9888C0DF2F666CE9AAE3DE1F /* InitialViewInput.swift in Sources */,
+				8F245C0002FDAEFFCD2B1F73 /* InitialViewOutput.swift in Sources */,
+				35C6F053BCEA265C80321CB9 /* InitialViewController.swift in Sources */,
+				8489FC41803FE4A3EDEF7E99 /* InitialModuleInput.swift in Sources */,
+				A7A8A31AF040623B4F1FF9AE /* InitialPresenter.swift in Sources */,
+				3E647645C3033A983646C462 /* InitialInteractorInput.swift in Sources */,
+				B8691E37CA163272A69D406C /* InitialInteractorOutput.swift in Sources */,
+				EF940CDB24FE6F57007BB2CA /* LocationServise.swift in Sources */,
+				B1A76B20314B03BD5CA67033 /* InitialInteractor.swift in Sources */,
+				86D136C839F8687AEDEA104A /* InitialRouterInput.swift in Sources */,
+				FB77CD1C813CFFA48E513502 /* InitialRouter.swift in Sources */,
+				9EFABCB48B1C99975EAFCA5E /* InitialConfigurator.swift in Sources */,
+				E0D481DB752AE4DF52E7DBDB /* InitialInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +692,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF32D48524FBB1B300B65664 /* MapAppTests.swift in Sources */,
+				19C9771734052FDDE6844402 /* InitialConfiguratorTests.swift in Sources */,
+				48EACBFEC0EE121CE75C62A3 /* InitialViewTests.swift in Sources */,
+				6F8414B79EF671D083CF9FCC /* InitialInteractorTests.swift in Sources */,
+				313EE4380C06302D1AF34CF1 /* InitialPresenterTests.swift in Sources */,
+				82F876435CBF6F3645C34A7C /* InitialRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,25 +722,6 @@
 			targetProxy = EF32D48C24FBB1B300B65664 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EF32D47324FBB1B200B65664 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF32D47424FBB1B200B65664 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EF32D47824FBB1B300B65664 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF32D47924FBB1B300B65664 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EF32D49224FBB1B300B65664 /* Debug */ = {
@@ -608,7 +845,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9396A9KSNU;
-				INFOPLIST_FILE = MapApp/Info.plist;
+				INFOPLIST_FILE = MapApp/Environments/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,7 +864,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9396A9KSNU;
-				INFOPLIST_FILE = MapApp/Info.plist;
+				INFOPLIST_FILE = MapApp/Environments/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

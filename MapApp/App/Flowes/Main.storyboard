@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jLo-My-FMc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="bNS-hh-hc2">
+            <objects>
+                <viewController id="jLo-My-FMc" customClass="InitialViewController" customModule="MapApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xWe-PS-olF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej7-wI-NsB" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWf-T7-Bo2">
+                                        <rect key="frame" x="343" y="616" width="55" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="gDR-c9-m4O"/>
+                                            <constraint firstAttribute="height" constant="55" id="k2x-nT-YP3"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="ic_compass_needle_32pt.png"/>
+                                        <connections>
+                                            <action selector="compassPrerssed:" destination="jLo-My-FMc" eventType="touchUpInside" id="rSW-aL-7g2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvb-dF-ix2">
+                                        <rect key="frame" x="359" y="479.5" width="25" height="8.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="1A3-eh-Sh3"/>
+                                            <constraint firstAttribute="height" constant="25" id="Zbz-2L-scm"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="minus" catalog="system"/>
+                                        <connections>
+                                            <action selector="minusPressed:" destination="jLo-My-FMc" eventType="touchUpInside" id="7sd-Mr-yeE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npP-aP-Ajm">
+                                        <rect key="frame" x="359" y="444" width="25" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="cgr-gp-4YY"/>
+                                            <constraint firstAttribute="width" constant="25" id="y9F-ZM-Rhg"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="plus" catalog="system"/>
+                                        <connections>
+                                            <action selector="plusPressed:" destination="jLo-My-FMc" eventType="touchUpInside" id="qoU-Sy-SED"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mvb-dF-ix2" secondAttribute="trailing" constant="30" id="5IA-ej-iBN"/>
+                                    <constraint firstAttribute="trailing" secondItem="lWf-T7-Bo2" secondAttribute="trailing" constant="16" id="5nh-eC-l9r"/>
+                                    <constraint firstItem="mvb-dF-ix2" firstAttribute="top" secondItem="npP-aP-Ajm" secondAttribute="bottom" constant="4" id="KY6-4n-39L"/>
+                                    <constraint firstItem="lWf-T7-Bo2" firstAttribute="top" secondItem="mvb-dF-ix2" secondAttribute="bottom" constant="120" id="NcO-20-W9Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="npP-aP-Ajm" secondAttribute="trailing" constant="30" id="cBA-5h-PIt"/>
+                                    <constraint firstAttribute="bottom" secondItem="lWf-T7-Bo2" secondAttribute="bottom" constant="225" id="dhQ-oP-6wv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ej7-wI-NsB" firstAttribute="leading" secondItem="fyX-EZ-KHJ" secondAttribute="leading" id="Pi5-TL-rsZ"/>
+                            <constraint firstItem="ej7-wI-NsB" firstAttribute="top" secondItem="xWe-PS-olF" secondAttribute="top" id="QxO-4T-cXo"/>
+                            <constraint firstAttribute="bottom" secondItem="ej7-wI-NsB" secondAttribute="bottom" id="SHM-xj-9Dw"/>
+                            <constraint firstItem="fyX-EZ-KHJ" firstAttribute="trailing" secondItem="ej7-wI-NsB" secondAttribute="trailing" id="Van-O5-Xj3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fyX-EZ-KHJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ej7-wI-NsB" id="o2j-Wz-ESD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOz-0A-ieg" sceneMemberID="firstResponder"/>
+                <customObject id="dEA-Lr-apN" customClass="InitialModuleInitializer" customModule="MapApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="initialViewController" destination="jLo-My-FMc" id="iG9-N3-EJd"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="363.768115942029" y="112.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_compass_needle_32pt.png" width="32" height="32"/>
+        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

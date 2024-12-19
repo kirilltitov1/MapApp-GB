@@ -1,0 +1,35 @@
+### Headers settings
+company: nil
+
+### Xcode project settings
+project_name: MapApp-GB
+xcodeproj_path: MapApp.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: MapApp
+
+# The file path for new modules
+project_file_path: MapApp/App/BusinessLogic
+
+# The Xcode group path to new modules
+project_group_path: MapApp/App/BusinessLogic
+
+### Tests generation settings section
+# The tests target name
+test_target: MapAppTests
+
+# The file path for new tests
+test_file_path: MapAppTests
+
+# The Xcode group path to new tests
+test_group_path: MapAppTests
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: rviper_controller}
+- {name: mvvm_controller}
+- {name: swifty_viper}
